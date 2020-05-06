@@ -2,10 +2,10 @@
     <h1>Like Compulsory</h1>
     <ul>
         <p>
-            <li *ngFor='let diary of diaries'>
+            <li *ngFor='let diary of diaries; let i = index'>
                 {{ diary.name }}
                 <button (click)='toggleDetails(i)'>Check it Out</button>
-                <app-diary-detail *ngIf='goal.showDescription' [diary]='diary'></app-diary-detail>
+                <app-diary-detail *ngIf='diary.showDescription' [diary]='diary' (isComplete)='completeDiary($event,1)'></app-diary-detail>
             </li>
         </p>
     </ul>

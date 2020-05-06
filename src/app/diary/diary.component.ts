@@ -17,6 +17,12 @@ export class DiaryComponent implements OnInit {
   toggleDetails(index){
     this.diaries[index].showDescription = !this.diaries[index].showDescription;
   }
+
+  completeDiary(isComplete, index){
+    if (isComplete) {
+      this.diaries.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
