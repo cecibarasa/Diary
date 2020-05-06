@@ -1,10 +1,12 @@
 <div>
     <h1>Like Compulsory</h1>
     <ul>
-        <li>
-            <p *ngFor='let diary of diaries'>
-                {{ diary.name }}</p>
-            <app-diary-detail [diary]='diary'></app-diary-detail>
-        </li>
+        <p>
+            <li *ngFor='let diary of diaries'>
+                {{ diary.name }}
+                <button (click)='toggleDetails(i)'>Check it Out</button>
+                <app-diary-detail *ngIf='goal.showDescription' [diary]='diary'></app-diary-detail>
+            </li>
+        </p>
     </ul>
 </div>

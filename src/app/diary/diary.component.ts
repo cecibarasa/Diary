@@ -8,12 +8,15 @@ import { Diary } from "../diary";
 })
 export class DiaryComponent implements OnInit {
 
-  diaries:Diary[] = [
-    {id:1, name:'About Today', description:'Today marks the beginning of my life'},
-    {id:2, name:'Dear Diary', description:'I am super sleepy although I have to study'},
-    {id:3, name:'Diary', description:'Angular sucks!!'},
+  diaries: Diary[] = [
+    new Diary(1, 'About Today', 'Today marks the beginning of my life'),
+    new Diary(2, 'Dear Diary', 'I am super sleepy although I have to study'),
+    new Diary(3, 'Diary', 'Angular sucks!!'),
   ];
 
+  toggleDetails(index){
+    this.diaries[index].showDescription = !this.diaries[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
