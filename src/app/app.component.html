@@ -1,4 +1,9 @@
 <div>
-    <h1>My Goals</h1>
-    <p>I need to updat My {{ title }} everyday</p>
+    <h1>Like Compulsory</h1>
+    <ul>
+        <li>
+            <p *ngFor='let diary of diaries'>
+                {{ diary }}></p>
+        </li>
+    </ul>
 </div>
