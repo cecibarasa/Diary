@@ -6,7 +6,7 @@
                 <li appHighlight>
                     {{ diary.name }} on {{ diary.completeDate|date }}
                     <button (click)='toggleDetails(i)'>Check it Out</button>
-                    <app-diary-detail *ngIf='diary.showDescription' [diary]='diary' (isComplete)='completeDiary($event,1)'></app-diary-detail>
+                    <app-diary-detail *ngIf='diary.showDescription' [diary]='diary' (isComplete)='deleteDiary($event,1)'></app-diary-detail>
                 </li>
             </p>
         </div>

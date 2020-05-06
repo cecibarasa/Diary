@@ -11,7 +11,7 @@ export class DiaryDetailComponent implements OnInit {
 @Input() diary: Diary;
 @Output() isComplete = new EventEmitter<boolean>();
 
-diaryComplete(complete:boolean){
+diaryDelete(complete:boolean){
   this.isComplete.emit(complete);
 }
   constructor() { }

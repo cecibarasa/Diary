@@ -18,9 +18,13 @@ export class DiaryComponent implements OnInit {
     this.diaries[index].showDescription = !this.diaries[index].showDescription;
   }
 
-  completeDiary(isComplete, index){
+  deleteDiary(isComplete, index){
     if (isComplete) {
-      this.diaries.splice(index,1);
+      let toDelete = confirm(`Are you sure about this?`)
+
+      if (toDelete) {
+        this.diaries.splice(index,1)
+      }
     }
   }
   constructor() { }
