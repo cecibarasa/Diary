@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Diary } from "./diary";
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  diaries:string[];
-
-  constructor(){
-    this.diaries = ['Dear Diary, Today marks the beginning of my life', 'Dear Diary, I am super sleepy although I have to study', 'Dear Diary, Angular sucks!!']
-  }
+  diaries:Diary[] = [
+{id:1, name:'Dear Diary, Today marks the beginning of my life'},
+{id:2, name:'Dear Diary, I am super sleepy although I have to study'},
+{id:3, name:'Dear Diary, Angular sucks!!'},
+  ];
   
 }
