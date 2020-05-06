@@ -7,10 +7,6 @@ import { Diary } from "./diary";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  diaries:Diary[] = [
-{id:1, name:'Dear Diary, Today marks the beginning of my life'},
-{id:2, name:'Dear Diary, I am super sleepy although I have to study'},
-{id:3, name:'Dear Diary, Angular sucks!!'},
-  ];
+  
   
 }
