@@ -1,14 +1,31 @@
-<div>
+<div class="container">
     <h1>Like Compulsory</h1>
-    <ul>
-        <div *ngFor='let diary of diaries; let i = index'>
-            <p>
-                <li appHighlight>
-                    {{ diary.name }} on {{ diary.completeDate|date }}
-                    <button (click)='toggleDetails(i)' class="btn btn-info">Check it Out</button>
-                    <app-diary-detail *ngIf='diary.showDescription' [diary]='diary' (isComplete)='deleteDiary($event,1)'></app-diary-detail>
-                </li>
-            </p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        <div *ngFor='let diary of diaries; let i = index'>
+                            <p>
+                                <li class="card-title" appHighlight highlightColor="#ff9933">
+                                    {{ diary.name }} , {{ diary.completeDate|date }}
+                                </li>
+                                <button (click)='toggleDetails(i)' class="btn btn-info card-link">Check it Out</button>
+                                <app-diary-detail *ngIf='diary.showDescription' [diary]='diary' (isComplete)='deleteDiary($event,1)'></app-diary-detail>
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </ul>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                        <app-diary-form></app-diary-form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

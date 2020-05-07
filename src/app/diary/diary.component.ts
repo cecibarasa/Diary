@@ -7,7 +7,7 @@ import { Diary } from "../diary";
   styleUrls: ['./diary.component.css']
 })
 export class DiaryComponent implements OnInit {
-
+  
   diaries: Diary[] = [
     new Diary(1, 'About Today', 'Today marks the beginning of my life', new Date(2020,5,4)),
     new Diary(2, 'Dear Diary', 'I am super sleepy although I have to study', new Date(2020,5,5)),

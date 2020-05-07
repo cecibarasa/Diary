@@ -8,5 +8,4 @@ import { Diary } from "./diary";
 })
 export class AppComponent {
   
-  
 }

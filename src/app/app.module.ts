@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,7 @@ import { AppComponent } from './app.component';
 import { DiaryComponent } from './diary/diary.component';
 import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
 import { HighlightDirective } from './highlight.directive';
+import { DiaryFormComponent } from './diary-form/diary-form.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { HighlightDirective } from './highlight.directive';
     DiaryComponent,
     DiaryDetailComponent,
     HighlightDirective,
+    DiaryFormComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
    
   ],
   providers: [],
