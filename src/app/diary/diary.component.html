@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Personal Diary</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        <div *ngFor='let diary of diaries; let i = index'>
+                            <p>
+                                <li class="card-title" appHighlight highlightColor="#ff9933">
+                                    {{ diary.name }} , {{ diary.completeDate|date }}
+                                </li>
+                                <button (click)='toggleDetails(i)' class="btn btn-info card-link">Check it Out</button>
+                                <app-diary-detail *ngIf='diary.showDescription' [diary]='diary' (isComplete)='deleteDiary($event,1)'></app-diary-detail>
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                        <app-diary-form (addDiary)="addNewDiary($event)"></app-diary-form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
