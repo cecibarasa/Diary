@@ -27,9 +27,15 @@ export class DiaryComponent implements OnInit {
       }
     }
   }
+
+  addNewDiary(diary){
+    let diaryLength = this.diaries.length;
+    diary.id = diaryLength+1;
+    diary.completeDate = new Date(diary.completeDate);
+    this.diaries.unshift(diary);
+  }
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
