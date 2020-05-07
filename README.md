@@ -25,4 +25,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## [Support and Contact Details](https://www.linkedin.com/in/cecilia-barasa-4a8311195/)
 
-## [LICENSE]
+## [LICENSE](https://github.com/cecibarasa/Diary/blob/master/license.md)
+Copyright (c) 2020 **Cecilia Barasa**
